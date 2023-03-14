@@ -61,4 +61,5 @@ typings/
 .next
 
 
-mongo_data
+mongo_data/
+cache/
