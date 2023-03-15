@@ -20,7 +20,7 @@ services:
     volumes: 
       - ./cache:/data
   server:
-    image: express-server
+    image: express-server-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
