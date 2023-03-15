@@ -7,7 +7,7 @@ COPY package-lock.json package-lock.json
 
 
 FROM base AS build-stage
-ENV NODE_ENV=production REACT_APP_BACKEND_URL=http://localhost:3000/
+ENV NODE_ENV=production REACT_APP_BACKEND_URL=http://localhost:8080/api/
 
 COPY . .
 
