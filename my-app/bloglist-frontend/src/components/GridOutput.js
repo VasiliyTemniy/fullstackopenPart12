@@ -67,7 +67,6 @@ const GridOutput = () => {
   }
 
   const clickHandle = (e) => {
-    e.preventDefault
     setClicked(true)
     const container = document.getElementById('container-initial')
     const containerHighlight = document.getElementById('container-initial-highlight')
