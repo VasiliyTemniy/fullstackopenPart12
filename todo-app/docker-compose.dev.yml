@@ -22,7 +22,7 @@ services:
     volumes: 
       - ./todo-backend/cache:/data
   backend:
-    image: express-server
+    image: express-server-dev
     build:
       context: ./todo-backend
       dockerfile: dev.Dockerfile
