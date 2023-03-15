@@ -1,0 +1,122 @@
+.background-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 0;
+  position: fixed;
+  background-color: #1c1e21;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container > .vessel {
+  position: fixed;
+  width: 30%;
+  height: 30%;
+  cursor: pointer;
+}
+
+.background-container > .show {
+  opacity: 0;
+  animation: toggle-visibility 0.25s forwards ease-in-out;
+}
+
+.background-container > .hide {
+  opacity: 1;
+  animation: toggle-visibility 0.25s reverse ease-in-out;
+}
+
+.background-container > .shown {
+  opacity: 1;
+}
+
+.background-container > .hidden {
+  opacity: 0;
+}
+
+@keyframes toggle-visibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toggle-visibility-notificaion {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.background-container > .container > .row {
+  height: 8px;
+  gap: 1px;
+}
+
+.background-container > .container > .row > .cell {
+  width: 8px;
+  height: 100%;
+  border-radius: 1000px;
+  padding: 0;
+}
+
+@keyframes slow-toggle-visibility {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.background-container > .show-slow {
+  opacity: 0;
+  animation: slow-toggle-visibility 6s forwards ease-in-out;
+}
+
+#container-plain > .row:nth-child(2n-1) {
+  --delay: 1;
+  --offset: 550%;
+}
+#container-plain > .row:nth-child(2n) {
+  --delay: 1;
+  --offset: -500%;
+}
+
+#container-plain > .row {
+  translate: var(--offset);
+  animation: load-row 1s calc(var(--delay) * 80ms) forwards;
+}
+
+@keyframes load-row {
+  100% {
+    translate: 0;
+  }
+}
